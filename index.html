@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>salary accaount</title>
+</head>
+<body>
+    <div class="container">
+
+        <div><h2 id="notice"></h2></div>
+        <div class="title"><h1><span id="ayi"></span> AYI MAAS PUSULASI</h1></div>
+
+        <div class="date"><h1 id="myDate"></h1></div>
+        
+        
+        <table >
+
+            <thead>
+                <tr>
+                    <th>bordrolar</th>
+                    <th>ايام</th>
+                    <th>ساعات</th>
+                    <th>الاجرة</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <th>الدوام العادي</th>
+                    <td id="normalGun"></td>
+                    <td id="normalSaat"></td>
+                    <td id="normalUcret"></td>
+                    
+                </tr>
+            </tbody>
+            <tbody>
+                <th>الاضافي <sub>%50</sub></th>
+                <td id="fazlaYGun"></td>
+                <td id="fazlaYSaat">0</td>
+                <td id="fazlaYUgret">0</td>
+
+            </tbody>
+
+            <tbody>
+                
+                <th>الاضافي <sub>%100</sub></th>
+                <td id="fazlaTGun">0</td>
+                <td id="fazlaTSaat">0</td>
+                <td id="fazlaTUgret">0</td>
+
+            </tbody>
+
+            <tfoot>
+                <th>الغياب</th>
+                <td id="zGun">0</td>
+                <td id="zSaat">0</td>
+                <td id="zUgret">0</td>
+            </tfoot>
+
+            </table>
+
+            <table style="margin-top: 30px;">
+                <thead>
+                    <tr>
+                        <th>القيمة</th>
+                        <th>الراتب الذي تتقاضاه</th>
+                        <th>مجموع العمل الاضافي</th>
+                        <th>المجموع النهائي للراتب</th>
+                    </tr>
+                    <tr>
+                        <th >TL</th>
+                        <td id="haveSalary"></td>
+                        <td id="fazlaTotal"></td>
+                        <td id="totalFily"></td>
+                    </tr>
+                </thead>
+            </table>
+            <p id="ceza" class="ceza none">  ملاحظة هذا الحساب غير دقيق %100 قد يتم خصم <span id="kimet"></span>  ليرة بسبب الغياب المتكرر</p>
+        
+        <div class="inputs">
+                <div>
+                    <button class="myBtns" onclick="setMany(notmany , devamsiz , zSaat)"
+                id="devamsizBtn">OK</button>
+                <input type="number" placeholder="اضافة ساعات غياب" id="devamsiz">
+                
+                </div>
+                
+                <div>
+                    <button class="myBtns" onclick="setMany(mesayi5 , fazla5 , fazlaYSaat)" 
+                    id="fazla5Btn">OK</button>
+                    <input type="number" placeholder=" 50% اضافة ساعات مسائي" max="8" id="fazla5">
+                    
+                </div>
+
+                <div>
+                    <button class="myBtns" onclick="setMany(mesayi10 , fazla10 , fazlaTSaat)" 
+                id="fazla10Btn"> OK</button>
+                <input type="number" placeholder=" 100% اضافة ساعات مسائي" max="8" id="fazla10">
+                
+                </div>
+
+            </div>
+
+            <button class="" id="salary">هل تتقاضى اكثر من الحد الادنى للأجور "11402" ؟ </button>
+            <div class="salary none">
+                    
+                <input type="number" placeholder="الاجر الذي تتقاضاه"  id="totalSalary">
+                <button id="salaryBtn"> OK</button>
+                </div>
+
+
+
+                <a id="a" href="manual.html"> <button class="manual">  الحساب اليدوي</button> </a>
+        </div>
+
+        <div class="container">
+            <h2 id="worning"> \/ ستظهر هنا قائمة عمل الأشهر الفائتة \/ </h2>
+        </div>
+
+        <div class="container" id="myList">
+            
+        </div>
+
+    </div>
+    <button onclick="sxs()">gghjfhkh</button>
+
+    <footer>
+        
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=+905346082621"><img src="whats.png" alt=""> اخبرنا اذا كنت تواجه مشاكل في البرنامج  </a>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.container{
+    overflow-x: hidden;
+    margin:20px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 98%;
+    flex-direction: column;
+}
+th{
+    border: 1px black solid;
+    padding: 5px;
+    width: 100px;
+}
+td{
+    text-align: center;
+    border: 1px solid rgba(115, 99, 99, 0.402);
+}
+
+
+.inputs{
+    display: flex;
+    align-items: center;
+
+    
+    margin: 30px auto;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.salary{
+    margin-top: 10px;
+}
+.salary input{
+    width: 190px;
+    height: 23px;
+    text-align: center;
+}
+.salary button{
+    padding: 5px;
+    border-radius: 14px;
+    background: #513565;
+    color: white;
+}
+#salary{
+    padding: 6px;
+    border-radius: 12px;
+    border: 0px solid black;
+    background-color: white;
+    border-bottom: 1px dotted black;
+    cursor: pointer;
+}
+.none{
+    display: none;
+}
+.salaryChenget{
+    width: 50px;
+    height: 30px;
+    overflow: hidden;
+    background-color: red;
+}
+.setError{
+    color: red;
+}
+
+@media (max-width: 400px){
+    th{
+        width: 70px;
+    }
+}
+.notActive{
+    opacity: .5;
+    pointer-events: none;
+}
+.manual{
+    padding: 7px;
+    margin: 10px 0;
+    width: 238px;
+    border-radius: 22px;
+    background: #5c5cf6;
+    color: white;
+    font-size:small;
+    cursor: pointer;
+
+}
+#a{
+    text-decoration: none;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    border-top: 1px solid rgba(121, 121, 121, 0.626);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 0;
+    height: 30px;
+    font-weight: lighter;
+}
+footer a img{
+    width: 10px;
+    margin: 3px;
+}
+footer a {
+    margin-right: 30px ;
+    text-decoration: none;
+    color: black;
+}
+
+#worning{
+    margin-bottom: 40px;
+
+}
+
+#kimet{
+    color: red;
+}
+#notice{
+    color: red;
+    margin: 20px 0;
+}
+#deleteList{
+background-color: rgb(255, 218, 218);
+box-sizing:border-box;
+}
+#deleteList button{
+    font-size:20px;
+    color: red;
+    border: none;
+    padding: 6px 8px;
+    background:  none;
+    cursor: pointer;
+}
