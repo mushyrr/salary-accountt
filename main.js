@@ -50,7 +50,7 @@ ayi.innerHTML = month
 
 let yesterday ;
 let mm = localStorage.yest;
-mm ? yesterday = mm : yesterday = (day - 1);
+mm ? yesterday = mm : yesterday = day ;
 
 
 let dayli1 ;
@@ -261,11 +261,11 @@ a.insertAdjacentHTML('afterend' , errorElement)
 
 if(yesterday > day){
     sxs()
-    yesterday = day - 1
+    yesterday = day
     localStorage.setItem('yest', yesterday)
     innerDate();
-}else{
-    yesterday = day - 1;
+}else if(yesterday < day) {
+    yesterday = day;
     localStorage.setItem('yest', yesterday)
 }
 
