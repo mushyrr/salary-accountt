@@ -279,6 +279,7 @@ function sxs(){
     let hanNormalUcret = Math.floor(myMaas1) + ' tl' ;
 
     
+    hanTotalFinly = Math.floor(( myMaas1 + finlyUgret));
     
     let myMonth =  myData.getMonth('en', { month: 'short' })
     myMonth >1? myMonth - 1 : myMonth = 12;
@@ -291,7 +292,7 @@ function sxs(){
     let myOb = {
         datetheList :year + '/' + myMonth ,
         today: myYesterday,
-        myHours:myHours,
+        myHours:myHours1,
         myMaas:myMaas1,
         hanNormalUcret:hanNormalUcret,
 
