@@ -264,7 +264,7 @@ if(yesterday > day){
     yesterday = day
     localStorage.setItem('yest', yesterday)
     innerDate();
-}else if(yesterday < day) {
+}else{
     yesterday = day;
     localStorage.setItem('yest', yesterday)
 }
