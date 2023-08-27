@@ -15,16 +15,13 @@ const fazla5 = document.getElementById('fazla5');
 const fazla10 = document.getElementById('fazla10');
 const avans = document.getElementById('avans');
 const avansBtn = document.getElementById('avansBtn');
-
 const salaryElement = document.getElementById('salary');
 const totalSalary = document.getElementById('totalSalary');
 const salaryBtn = document.getElementById('salaryBtn');
 const salaryDiv = document.querySelector('.salary');
 const salary = document.getElementById('salary')
-
 const dateElement = document.getElementById('myDate');
 const ayi = document.getElementById('ayi');
-
 const haveSalary = document.getElementById('haveSalary');
 const fazlaTotal = document.getElementById('fazlaTotal');
 const totalFily= document.getElementById('totalFily');
@@ -178,6 +175,7 @@ many2.value > 8 ? setError(many2 , 'المعذرة لا يمكن اضافة اك
 :many2.value == 0 ?( many2.value ='') + ( many2.placeholder === 'تمت الاضافة'?'': 'يجب اضافة قيمة !') : "";
     }else{
 
+        
     many = +many2.value;
 
 
@@ -217,9 +215,13 @@ many2.value > 8 ? setError(many2 , 'المعذرة لا يمكن اضافة اك
 
         innerDate();
         
+
+        if(many2.value === ''){
+            let B = many2.dataset.btn
+            document.getElementById(B).classList.remove('activeBtn')
+        }
     }
 };
-//localStorage.clear('mesa5');
 
 
 
@@ -260,20 +262,21 @@ a.insertAdjacentHTML('afterend' , errorElement)
 
 
 if(yesterday > day){
-    sxs()
-    yesterday = day
-    localStorage.setItem('yest', yesterday)
+    sxs();
+    yesterday = day ;
+    localStorage.setItem('yest', yesterday);
     innerDate();
+    location.reload()
 }else{
-    yesterday = day;
-    localStorage.setItem('yest', yesterday)
+    yesterday = day ;
+    localStorage.setItem('yest', yesterday);
 }
 
 function sxs(){
 
 
     let myYesterday = (yesterday - (notmany /8)) ;
-    let myHours1 =  (yesterday * 8) - notmany;
+    let myHours1 =  (yesterday * 8) - (notmany);
     
     let myMaas1 = myHours1 * myAzgeri;
     let hanNormalUcret = Math.floor(myMaas1) + ' tl' ;
@@ -295,19 +298,16 @@ function sxs(){
         myHours:myHours1,
         myMaas:myMaas1,
         hanNormalUcret:hanNormalUcret,
-
         hanfazlaYGun:hanfazlaYGun,
         hanFazlaTGun:hanFazlaTGun,
         hanZGun:hanZGun,
         hanFazlaYUgret:hanFazlaYUgret,
         hanFazlaTUgret:hanFazlaTUgret,
         hanZUcret:hanZUcret,
-
         mesayi5:mesayi5,
         mesayi10:mesayi10,
         notmany:notmany,
         mySalary:mySalary,
-
         finlyFazla:finlyFazla,
         totalFinly:hanTotalFinly 
     }
@@ -316,12 +316,15 @@ function sxs(){
 
 
 
-   localStorage.removeItem('mesa5');
-   localStorage.removeItem('mesa10');
-   localStorage.removeItem('notM');
    
-   creatList()
-innerDate()
+   
+   creatList();
+
+localStorage.removeItem('mesa5');
+localStorage.removeItem('mesa10');
+localStorage.removeItem('notM');
+
+innerDate();
     }
 
 
@@ -424,10 +427,30 @@ innerDate()
         notice.innerText = 'هل صليت على النبي اليوم ؟'
     }
 
-    console.log(hanTotalFinly)
+    
 
     function delateItem(i){
         myArray.splice(i,1)
         localStorage.myList = JSON.stringify(myArray);
         creatList()
     }
+    
+    function addActiveToInp(){
+        
+const inps = document.querySelectorAll('.inp')
+
+        inps.forEach((e)=>{
+            e.addEventListener('input' , e=>{
+                let B = e.target.dataset.btn
+                if(e.target.value !=''){
+                    document.getElementById(B).classList.add("activeBtn")
+                }else{
+                    document.getElementById(B).classList.remove("activeBtn")
+                }
+            })
+        })
+
+
+    }
+
+    addActiveToInp();
