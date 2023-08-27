@@ -142,3 +142,25 @@ box-sizing:border-box;
     background:  none;
     cursor: pointer;
 }
+
+
+
+.inp{
+    padding: 7px;
+    border-radius: 16px;
+    margin: 7px 0px 0 7px;
+}
+
+.myBtns{
+    width: 60px;
+    height: 30px;
+    border-radius: 16px;
+    transition: .5s;
+}
+
+.myBtns.activeBtn{
+    background-color: green;
+    color: white;
+    font-size: large;
+    letter-spacing: 2px;
+}
