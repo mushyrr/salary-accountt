@@ -14,7 +14,7 @@
             <div>
                 <button class="myBtns"
             id="normalBtn">OK</button>
-            <input type="number" placeholder="اضافة ايام دوام" id="normalinput">
+            <input data-btn="normalBtn" type="number" class="inp" placeholder="اضافة ايام دوام" id="normalinput">
             
             </div>
 
@@ -22,21 +22,21 @@
             <div>
                 <button class="myBtns" onclick="setMany(notmany , devamsiz , zSaat)"
             id="devamsizBtn">OK</button>
-            <input type="number" placeholder="اضافة ساعات غياب" id="devamsiz" >
+            <input data-btn="devamsizBtn" type="number" class="inp" placeholder="اضافة ساعات غياب" id="devamsiz" >
             
             </div>
             
             <div>
                 <button class="myBtns" onclick="setMany(mesayi5 , fazla5 , fazlaYSaat)" 
                 id="fazla5Btn">OK</button>
-                <input type="number" placeholder=" 50% اضافة ساعات مسائي"  id="fazla5">
+                <input data-btn="fazla5Btn" type="number" class="inp" placeholder=" 50% اضافة ساعات مسائي"  id="fazla5">
                 
             </div>
 
             <div>
                 <button class="myBtns" onclick="setMany(mesayi10 , fazla10 , fazlaTSaat)" 
             id="fazla10Btn"> OK</button>
-            <input type="number" placeholder=" 100% اضافة ساعات مسائي" id="fazla10">
+            <input data-btn="fazla10Btn" type="number" class="inp" placeholder=" 100% اضافة ساعات مسائي" id="fazla10">
             
             </div>
 
@@ -44,14 +44,13 @@
             
 
             <div >
-                    <button id="salaryBtn"> OK</button>
-                <input type="number" placeholder="الاجر الذي تتقاضاه"  id="totalSalary">
+                    <button class="myBtns" id="salaryBtn"> OK</button>
+                <input data-btn="salaryBtn" type="number" class="inp" placeholder="الاجر الذي تتقاضاه"  id="totalSalary">
                 
                 </div>
 
 
         </div>
-
 
 
         <table >
