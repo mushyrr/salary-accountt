@@ -41,6 +41,11 @@ normalBtn.addEventListener('click', ()=>{
         normalinput.value = '';
     innerDate()
 
+        if(normalinput.value === ''){
+        let B = normalinput.dataset.btn
+        document.getElementById(B).classList.remove('activeBtn')
+    }
+
     }
 })
 
@@ -51,6 +56,11 @@ salaryBtn.addEventListener('click', ()=>{
         totalSalary.value = '';
     }
         innerDate()
+
+    if(totalSalary.value === ''){
+            let B = totalSalary.dataset.btn
+            document.getElementById(B).classList.remove('activeBtn')
+        }
 })
 
 
@@ -89,6 +99,11 @@ many2.value < 0? setError(many2 , 'المعذرى لا يمكن اضافة قي�
 
 
         innerDate();
+
+        if(many2.value === ''){
+            let B = many2.dataset.btn
+            document.getElementById(B).classList.remove('activeBtn')
+        }
         
     }
 };
