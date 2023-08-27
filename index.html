@@ -80,25 +80,25 @@
             </table>
             <p id="ceza" class="ceza none">  ملاحظة هذا الحساب غير دقيق %100 قد يتم خصم <span id="kimet"></span>  ليرة بسبب الغياب المتكرر</p>
         
-        <div class="inputs">
+         <div class="inputs">
                 <div>
                     <button class="myBtns" onclick="setMany(notmany , devamsiz , zSaat)"
                 id="devamsizBtn">OK</button>
-                <input type="number" placeholder="اضافة ساعات غياب" id="devamsiz">
+                <input data-btn="devamsizBtn" class="inp" type="number" placeholder="اضافة ساعات غياب" id="devamsiz">
                 
                 </div>
                 
                 <div>
                     <button class="myBtns" onclick="setMany(mesayi5 , fazla5 , fazlaYSaat)" 
                     id="fazla5Btn">OK</button>
-                    <input type="number" placeholder=" 50% اضافة ساعات مسائي" max="8" id="fazla5">
+                    <input data-btn="fazla5Btn" class="inp"  type="number" placeholder=" 50% اضافة ساعات مسائي" max="8" id="fazla5">
                     
                 </div>
 
                 <div>
                     <button class="myBtns" onclick="setMany(mesayi10 , fazla10 , fazlaTSaat)" 
                 id="fazla10Btn"> OK</button>
-                <input type="number" placeholder=" 100% اضافة ساعات مسائي" max="8" id="fazla10">
+                <input class="inp" data-btn="fazla10Btn"  type="number" placeholder=" 100% اضافة ساعات مسائي" max="8" id="fazla10">
                 
                 </div>
 
