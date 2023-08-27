@@ -212,4 +212,27 @@ if((aa) >= 1 && day != 0 && mySalary != 0){
 }else{
     ceza.classList.add('none');
 }
-}
+};
+
+
+
+function addActiveToInp(){
+        
+    const inps = document.querySelectorAll('.inp')
+    
+            inps.forEach((e)=>{
+                e.addEventListener('input' , e=>{
+                    let B = e.target.dataset.btn
+                    if(e.target.value !=''){
+                        document.getElementById(B).classList.add("activeBtn")
+                    }else{
+                        document.getElementById(B).classList.remove("activeBtn")
+                    }
+                })
+            })
+    
+    
+        }
+    
+        addActiveToInp();
+
