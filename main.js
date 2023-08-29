@@ -169,10 +169,10 @@ innerDate();
 
 function setMany(many , many2 , many3){
 
-    if(many2.value > 8 || many2.value <= 0){
-many2.value > 8 ? setError(many2 , 'المعذرة لا يمكن اضافة اكثر من 8 ساعات') 
-:many2.value < 0? setError(many2 , 'المعذرى لا يمكن اضافة قيمة سالبة')
-:many2.value == 0 ?( many2.value ='') + ( many2.placeholder === 'تمت الاضافة'?'': 'يجب اضافة قيمة !') : "";
+     if(many2.value > 40 || many2.value == 0 || many2.value <-40){
+many2.value > 40 ? setError(many2 , 'المعذرة لا يمكن اضافة اكثر من 40 ساعة') 
+:many2.value < -40? setError(many2 , 'المعذرى لا يمكن اضافة قيمة اقل من -40')
+:many2.value == 0 ?( many2.value ='') + ( many2.placeholder === 'تمت الاضافة'? '': 'يجب اضافة قيمة !') : "";
     }else{
 
         
@@ -266,7 +266,6 @@ if(yesterday > day){
     yesterday = day ;
     localStorage.setItem('yest', yesterday);
     innerDate();
-    location.reload()
 }else{
     yesterday = day ;
     localStorage.setItem('yest', yesterday);
@@ -320,10 +319,14 @@ function sxs(){
    
    creatList();
 
-localStorage.removeItem('mesa5');
-localStorage.removeItem('mesa10');
-localStorage.removeItem('notM');
+   notmany = 0;
+   mesayi10 = 0;
+   mesayi5 = 0;
 
+
+   localStorage.setItem('mesa5', mesayi5);
+   localStorage.setItem('mesa10' , mesayi10);
+   localStorage.setItem('notM', notmany);
 innerDate();
     }
 
